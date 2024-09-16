@@ -1,0 +1,62 @@
+Om Namh Shivya
+Har Har Mahadev
+Jai Ho Ganesh ji Maharaj
+Jai ho 36 Koti Dev Davta ki
+
+
+
+        supplier_id
+        supplier_name
+        mobile_no
+        email_id
+        location/address
+        district
+        state
+        pincode
+        vehicle_no
+        vehicle_type
+        vehicle_driver_name
+        vehicle_driver_Id
+        driver_contact_no
+
+        item_ID int
+        item_name
+        item_type
+        quantity
+        rate_per_piece
+        expiry_date
+        date_time
+        total_amount
+
+
+
+        alter table newstockpurchasedetalis
+        add  supplier_id int unique key not null ,
+        add supplier_name varchar(20) not null,
+        add mobile_no bigint(10) not null,
+        add email_id varchar(15),
+        add address varchar(25),
+        add district varchar(20) not null,
+        add state varchar(20) not null,
+        add pincode middleint not null,
+        add vehicle_no varchar(15) not null,
+        add vehicle_type varchar(15) not null,
+        add vehicle_driver_name varchar(20) not null,
+        add vehicle_driver_Id bigint not null,
+        add driver_contact_no bigint(10) not null;
+
+
+
+        item_ID, item_name, item_type, quantity, rate_per_piece, expiry_date, date_time, total_amount
+        102	     Coca Cola	1587CD	    57	      102.53	      2024-11-15  2024-07-17  5844.21
+
+
+        UPDATE `supermarket_database`.`itemsdetails` SET `item_ID` = '104' WHERE (`item_ID` = '105');
+        UPDATE `supermarket_database`.`itemsdetails` SET `item_ID` = '2' WHERE (`item_ID` = '106');
+        UPDATE `supermarket_database`.`itemsdetails` SET `item_ID` = '101' WHERE (`item_ID` = '103');
+        UPDATE `supermarket_database`.`itemsdetails` SET `item_ID` = '105' WHERE (`item_ID` = '109');
+
+        Operation failed: There was an error while applying the SQL script to the database.
+        ERROR 1451: 1451: Cannot delete or update a parent row: a foreign key constraint fails (`supermarket_database`.`selldetails`, CONSTRAINT `selldetails_ibfk_1` FOREIGN KEY (`item_ID`) REFERENCES `itemsdetails` (`item_ID`))
+        SQL Statement:
+        UPDATE `supermarket_database`.`itemsdetails` SET `item_ID` = '101' WHERE (`item_ID` = '103')
